@@ -4,10 +4,11 @@
 Writes one commit message (<=100 chars) to $MAKEFUN_OUTPUT_DIR/entry.txt.
 
 The joke: a fix for a login bug that only hit 1% of users, "fixed" by
-making login fail for everyone — equally. The repair didn't mend the
-bug, it democratised it. Reads like a real commit subject typed by a
-tired engineer at the end of a bad day: plain, short, and the punchline
-("equally") lands on its own with no explanation needed.
+making login fail for all of them. The repair didn't mend the bug, it
+promoted it. Reads like a real commit subject typed by the tired
+engineer who did it, confessing in the first person instead of hiding
+behind the passive voice: plain, short, and the punchline ("for all of
+them") lands on its own with no explanation needed.
 
 Stdlib only, deterministic, no network. Never raises; any failure to
 write exits 0 without writing anything.
@@ -17,7 +18,7 @@ import os
 import sys
 import tempfile
 
-ENTRY = "fix: login failed for 1% of users, now fails for everyone equally"
+ENTRY = "fix: login failed for 1% of users, so I made it fail for all of them"
 
 
 def _repo_dir():
